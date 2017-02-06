@@ -20,8 +20,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     if(window.Connection) {
                 if(navigator.connection.type == Connection.NONE) {
                     $ionicPopup.alert({
-                        title: 'No WiFi Connection',
-                        template: 'Smart Home app needs WiFi to function. Please Connect and try again.'
+                        title: 'No Internet Connection',
+                        template: 'Smart Home app needs an active internet connection to function. Please Connect and try again.'
                     })
                     .then(function(result) {
                         if(result) {
