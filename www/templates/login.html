@@ -1,18 +1,17 @@
 <ion-view title="Login" id="page8">
   <ion-content padding="true" class="has-header">
-    <form id="login-form2" class="list">
+    <form name="myForm" class="list" ng-submit="doSomething()">
       <ion-list id="login-list3">
         <label class="item item-input item-stacked-label" id="login-input3">
-          <span class="input-label">Username</span>
-          <input type="text" placeholder="" ng-model="data.username">
+          <span class="input-label">Home Access Code</span>
+          <input type="password" placeholder="" ng-model="test" name="test" regex-validate="\buser1\b">
+          <span style="color:red" ng-show="myForm.test.$error.regexValidate" class="icon ion-information-circled"> Please enter secret code</span>
+          
         </label>
-        <label class="item item-input item-stacked-label" id="login-input4">
-          <span class="input-label">Password</span>
-          <input type="password" placeholder="" ng-model="data.password">
-        </label>
+        
       </ion-list>
       <div class="spacer" style="height: 40px;"></div>
-      <button  ui-sref='tabs.dashboard' id="login-button3" class="button button-calm  button-block" >Log in</button>
+      <button  type="submit" ng-disabled="myForm.$invalid" ui-sref="tabs.dashboard" class="button button-calm  button-block" >Log in</button>
     </form>
   </ion-content>
 </ion-view>
