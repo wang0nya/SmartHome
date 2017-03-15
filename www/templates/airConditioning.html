@@ -2,8 +2,15 @@
   <ion-nav-bar class="bar-positive"></ion-nav-bar>
   <ion-content padding="true" class="has-header">
     <form id="airConditioning-form4" class="list">
-      <ion-toggle toggle-class="toggle-positive" id="airConditioning-toggle4">Main Fan</ion-toggle>
-      <ion-toggle toggle-class="toggle-positive" id="airConditioning-toggle5">Bedroom Fan</ion-toggle>
+      <div class="list card">
+      <div class="item item-divider item-stable">Bed Room Fan</div>
+      <div class="item item-body">
+        <div class="button-bar">
+          <a class="button button-balanced" ng-click="setAirRelay(9, 1)">On</a>
+          <a class="button button-assertive" ng-click="setAirRelay(9, 256)">Off</a>
+        </div>
+      </div>
+    </div>
     </form>
   </ion-content>
 </ion-view>
